@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Javascript Activity #9</title>
+<script>
+imgArray = new Array(4);
+imgArray[0] = new Image;
+imgArray[0].src = "lions.gif";
+imgArray[1] = new Image;
+imgArray[1].src = "tigers.gif";
+imgArray[2] = new Image;
+imgArray[2].src = "bears.gif";
+imgArray[3] = new Image;
+imgArray[3].src = "ohmy.gif";
+index = 0;
+
+function select()
+{
+index = Math.floor(Math.random() * 4);
+document.banner.src = imgArray[index].src;
+setTimeout("select()", 2000);
+return;
+}
+
+</script>
+</head>
+<body onLoad="select();">
+<center>
+<img src="lions.gif"
+NAME="banner"
+WIDTH=400
+HEIGHT=100>
+</center>
+</body>
+</html>

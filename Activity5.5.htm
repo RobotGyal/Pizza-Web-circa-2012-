@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Javascript #10</title>
+<script>
+imgArray = new Array(4);
+imgArray[0] = new Image;
+imgArray[0].src = "lions.gif";
+imgArray[1] = new Image;
+imgArray[1].src  = "tigers.gif";
+imgArray[2] = new Image;
+imgArray[2].src = "bears.gif";
+imgArray[3] = new Image;
+imgArray[3].src = "ohmy.gif";
+index = 0;
+
+function doBack()
+{
+if (index > 0)
+{
+index--;
+document.slideshow.src = imgArray[index].src;
+}
+return;
+}
+function doNext()
+{
+if(index < 3)
+{
+index++;
+document.slideshow.src = imgArray[index].src;
+}
+return;
+}
+</script>
+</head>
+<body>
+<center>
+<h1>My Javascript Slide Show </h1>
+<p>
+<img src="lions.gif"
+NAME="slideshow"
+WIDTH=400
+HEIGHT=200>
+<p>
+<h3>
+<a href=javascript:doBack()>Back</a>
+&nbsp &nbsp &nbsp
+<a href=javascript:doNext()>Next</a>
+<h3>
+</center>
+</body>
+</html>

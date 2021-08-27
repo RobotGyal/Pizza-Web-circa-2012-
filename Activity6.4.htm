@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>Javascript Activity #14</title>
+<script>
+function validateText(pizzaForm)
+{
+if (pizzaForm.name.value == "")
+{
+return false;
+}
+if (pizzaForm.address.value == "")
+{
+return false;
+}
+if (pizzaForm.city.value == "")
+{
+return false;
+}
+if (pizzaForm.phone.value == "")
+{
+return false;
+}
+return true;
+}
+
+function doSubmit(pizzaForm)
+{
+if (validateText(pizzaForm) == false)
+{
+alert("Required data missing in Step 1");
+return;
+}
+alert("Your pizza order has been submitted!");
+return;
+}
+
+function doClear(pizzaForm)
+{
+pizzaForm.name.value = "";
+pizzaForm.address.value = "";
+pizzaForm.city.value = "";
+pizzaForm.state.value = "";
+pizzaForm.zip.value = "";
+pizzaForm.phone.value = "";
+pizzaForm.size[0].checked = false;
+pizzaForm.size[1].checked = false;
+pizzaForm.size[2].checked = false;
+pizzaForm.topping[0].checked = false;
+pizzaForm.topping[1].checked = false;
+pizzaForm.topping[2].checked = false;
+pizzaForm.topping[3].checked = false;
+pizzaForm.topping[4].checked = false;
+pizzaForm.topping[5].checked = false;
+return;
+}
+</script>
+</head>
+<body>
+<h1>The Javascript Pizza Parlor</h1>
+<Form name="pizzaForm">
+<br>
+<h4>Step 1: Enter your names, address, and phone number:</h4>
+<font face= "courier">
+Name: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size=50 name="name"><br>
+Address: &nbsp;<input type="text" size=50 name="address"><br>
+City: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size=16 name="city"><br>
+State: &nbsp;&nbsp;&nbsp;<input type="text" size=4 name="state"><br>
+Zip Code: <input type="text" size=8 name="zip"><br>
+Phone:  &nbsp;&nbsp;&nbsp;<input type="text" size=50 name="phone"><br>
+</font>
+<br>
+<br>
+<h4>Step 2: Select the size of your pizza you want:</h4>
+<font face="courier">
+<input type="radio" Name="size">Small
+<input type="radio" Name="size">Medium
+<input type="radio" Name="size">Large<br>
+</font>
+<br>
+<br>
+<h4>Step 3: Select the pizza toppings you want:</h4>
+<font face= "courier">
+<input type="checkbox" name="topping">Pepperoni
+<input type="checkbox" name="topping">Canadian Bacon
+<input type="checkbox" name="topping">Sausage<br>
+<input type="checkbox" name="topping">Mushrooms
+<input type="checkbox" name="topping">Pineapple
+<input type="checkbox" name="topping">Black Olives<br>
+</font>
+<br>
+<Br>
+<input type="button" value="Submit order" onClick="doSubmit(pizzaForm);">
+<input type="button" value ="Clear entries"
+onClick="doClear(pizzaForm);">
+</form>
+</body>
+</html>

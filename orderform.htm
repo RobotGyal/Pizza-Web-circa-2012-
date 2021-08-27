@@ -1,0 +1,148 @@
+<html>
+<head>
+<title>Pizza Order Form</title>
+<br>
+<center>
+<img src=knight_pizzeria_logo2.png width=800 height=200>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+</center>
+<br><br><br><Br>
+<script>
+function validateText(pizzaForm)
+{
+if (pizzaForm.name.value == "")
+{
+return false;
+}
+if (pizzaForm.address.value == "")
+{
+return false;
+}
+if (pizzaForm.city.value == "")
+{
+return false;
+}
+if (pizzaForm.phone.value == "")
+{
+return false;
+}
+return true;
+}
+
+function doSubmit(pizzaForm)
+{
+if (validateText(pizzaForm) == false)
+{
+alert("Required data missing in Step 1");
+return;
+}
+alert("Your pizza order has been submitted!");
+return;
+}
+
+function doClear(pizzaForm)
+{
+pizzaForm.name.value = "";
+pizzaForm.address.value = "";
+pizzaForm.city.value = "";
+pizzaForm.state.value = "";
+pizzaForm.zip.value = "";
+pizzaForm.phone.value = "";
+pizzaForm.size[0].checked = false;
+pizzaForm.size[1].checked = false;
+pizzaForm.size[2].checked = false;
+pizzaForm.crust[0].checked = false;
+pizzaForm.crust[1].checked = false;
+pizzaForm.crust[2].checked = false;
+pizzaForm.crust[3].checked = false;
+pizzaForm.topping[0].checked = false;
+pizzaForm.topping[1].checked = false;
+pizzaForm.topping[2].checked = false;
+pizzaForm.topping[3].checked = false;
+pizzaForm.topping[4].checked = false;
+pizzaForm.topping[5].checked = false;
+pizzaForm.appetizer[0].checked = false;
+pizzaForm.appetizer[1].checked = false;
+pizzaForm.appetizer[2].checked = false;
+pizzaForm.appetizer[3].checked = false;
+pizzaForm.appetizer[4].checked = false;
+pizzaForm.appetizer[5].checked = false;
+return;
+}
+</script>
+</head>
+<body>
+<h1>Knights Pizzeria Pizza Order Form</h1>
+<Form name="pizzaForm">
+<br>
+<h4>Step 1: Enter your names, address, and phone number:</h4>
+<font face= "courier">
+Name: &nbsp;&nbsp;&nbsp;<input type="text" size=50 name="name"><br>
+Address: <input type="text" size=50 name="address"><br>
+City: &nbsp;&nbsp;&nbsp;<input type="text" size=16 name="city"><br>
+State: <input type="text" size=4 name="state"><br>
+Zip Code: <input type="text" size=8 name="zip"><br>
+Phone:  &nbsp;&nbsp;<input type="text" size=50 name="phone"><br>
+</font>
+<br>
+<br>
+<h4>Step 2: Select the size of your pizza you want:</h4>
+<font face="courier">
+<input type="radio" Name="size">Small
+<input type="radio" Name="size">Medium
+<input type="radio" Name="size">Large<br>
+</font>
+<br>
+<br>
+<h4>Step 3: Select the pizza crust you want:</h4>
+<font face= "courier">
+<input type="checkbox" name="crust">Thick
+<input type="checkbox" name="crust">Thin
+<input type="checkbox" name="crust">Cheese Stuffed
+<input type="checkbox" name="crust">Garlic
+</font>
+<br>
+<br>
+<h4>Step 4: Select the pizza toppings you want:</h4>
+<font face= "courier">
+<input type="checkbox" name="topping">Pepperoni
+<input type="checkbox" name="topping">Canadian Bacon
+<input type="checkbox" name="topping">Sausage<br>
+<input type="checkbox" name="topping">Mushrooms
+<input type="checkbox" name="topping">Pineapple
+<input type="checkbox" name="topping">Black Olives<br>
+</font>
+<br>
+<br>
+<h4>Step 5: Select the appetizer you want:</h4>
+<font face= "courier">
+<input type="checkbox" name="appetizer">Sreak Fries
+<input type="checkbox" name="appetizer">Celery Stalks
+<input type="checkbox" name="appetizer">Chicken Wings<br>
+<input type="checkbox" name="appetizer">Grilled Shrimp Kabob
+<input type="checkbox" name="appetizer">Cheese Sticks
+<input type="checkbox" name="appetizer">Fried Okra<br>
+</font>
+<br>
+<br>
+<input type="button" value="Submit order" onClick="doSubmit(pizzaForm);">
+<input type="button" value ="Clear entries"
+onClick="doClear(pizzaForm);">
+</form>
+<br><br>
+
+<font size=4><b>
+Click <a href= directions.htm>here</a> to go to the Directions page
+<br>
+Click <a href= indexpizza.htm>here</a> to go to the Homepage
+</b>
+
+<br><br><br>
+<h5>
+<SCRIPT>
+
+	lastModDate = new Date (document.lastModified)
+	document.write ("<B><I>Last Updated:</I></B> " + lastModDate)
+</SCRIPT>
+</h5>
+</body>
+</html>

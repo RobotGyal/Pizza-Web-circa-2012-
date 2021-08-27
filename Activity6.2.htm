@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Javascript Activity #12</title>
+<script>
+function doSubmit(pizzaForm)
+{
+alert("Your pizza order has been submitted!");
+return;
+}
+</script>
+</head>
+<body>
+<h1>The Javascript Pizza Parlor</h1>
+<Form name="pizzaForm">
+<br>
+<h4>Step 1: Enter your names, address, and phone number:</h4>
+<font face= "courier">
+Name: &nbsp;&nbsp;&nbsp;<input type="text" size=50 name="name"><br>
+Address: <input type="text" size=50 name="address"><br>
+City: &nbsp;&nbsp;&nbsp;<input type="text" size=16 name="city"><br>
+State: <input type="text" size=4 name="state"><br>
+Zip Code: <input type="text" size=8 name="zip"><br>
+Phone:  &nbsp;&nbsp;<input type="text" size=50 name="phone"><br>
+</font>
+<br>
+<br>
+<h4>Step 2: Select the size of your pizza you want:</h4>
+<font face="courier">
+<input type="radio" Name="size">Small
+<input type="radio" Name="size">Medium
+<input type="radio" Name="size">Large<br>
+</font>
+<br>
+<br>
+<h4>Step 3: Select the pizza toppings you want:</h4>
+<font face= "courier">
+<input type="checkbox" name="topping">Pepperoni
+<input type="checkbox" name="topping">Canadian Bacon
+<input type="checkbox" name="topping">Sausage<br>
+<input type="checkbox" name="topping">Mushrooms
+<input type="checkbox" name="topping">Pineapple
+<input type="checkbox" name="topping">Black Olives<br>
+</font>
+<br>
+<Br>
+<input type="button" value="Submit order" onClick="doSubmit(pizzaForm);">
+<input type="button" value ="Clear entries">
+</form>
+</body>
+</html>
